@@ -1,5 +1,8 @@
 <?php
 
+
+use App\Http\Controllers\IngpastelController;
+use App\Http\Controllers\IngredienteController;
 use App\Http\Controllers\PastelController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
@@ -21,4 +24,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource("v1/pastels", PastelController::class);
+Route::apiResource("v1/ingredientes", IngredienteController::class);
+Route::apiResource("v1/ingpastel", IngpastelController::class);
 Route::apiResource("v1/usuarios", UserController::class);

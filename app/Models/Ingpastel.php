@@ -5,16 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Ingrediente extends Model
+class Ingpastel extends Model
 {
     use HasFactory;
-    public $table = "ingredientes";
+    public $table = "ingrediente_pastel";
     protected $fillable = [
-        'nombre',
-        'descripcion',
-        'f_ingreso',
-        'f_vencimiento',
-        'id'
+        'id',
+        'pastel_id',
+        'ingrediente_id'
     ];
     public function pastels(){
         return $this->belongsToMany(Pastel::class, "ingrediente_pastel");
